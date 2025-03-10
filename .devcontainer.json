@@ -1,0 +1,21 @@
+{
+  "name": "React Native Expo with Android",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/android:1": {
+      "sdkVersion": "latest",
+      "platformToolsVersion": "latest",
+      "buildToolsVersion": "latest"
+    }
+  },
+  "postCreateCommand": "yarn install && npx expo prebuild --platform android",
+  "forwardPorts": [19000, 19001, 19002, 19006, 8081, 8082, 9000, 9001],
+  "customizations": {
+    "vscode": {
+      "extensions": ["expo.vscode-expo-extension"]
+    }
+  }
+}
